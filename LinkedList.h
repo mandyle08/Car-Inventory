@@ -19,7 +19,7 @@ class LinkedList{
 
   public:
   LinkedList();
-  ~LinkedList();
+  virtual ~LinkedList();
   LinkedList<T>& operator+=(T*);
   LinkedList<T>& operator-=(T*);
   int getSize() const;
@@ -34,8 +34,6 @@ class LinkedList{
 /*
 Function: LinkedList template-Constructor
 Purpose:initilizes the size
-input/output:none
-return: none
 */
 template <class T>
 LinkedList<T>::LinkedList() : head(0){}
@@ -43,8 +41,6 @@ LinkedList<T>::LinkedList() : head(0){}
 /*
 Function: deconstructor LinkedList template
 Purpose:frees memory
-input/output:none
-return: none
 */
 template <class T>
 LinkedList<T>::~LinkedList(){
@@ -65,8 +61,6 @@ LinkedList<T>::~LinkedList(){
 /*
 Function: += operator
 Purpose:adds any object to linkedlist
-input/output:none
-return: customer in list
 */
 template <class T>
 LinkedList<T>& LinkedList<T>::operator+=(T* newCust)
@@ -101,8 +95,6 @@ LinkedList<T>& LinkedList<T>::operator+=(T* newCust)
 /*
 Function: -= operator
 Purpose:removes any object in linkedlist
-input/output:none
-return: none
 */
 template <class T>
 LinkedList<T>& LinkedList<T>::operator-=(T* cust)
@@ -137,9 +129,6 @@ LinkedList<T>& LinkedList<T>::operator-=(T* cust)
 /*
 Function: getSize()
 Purpose: Gets size of the linked list
-input:none
-output:size of list
-return: none
 */
 template <class T>
 int LinkedList<T>::getSize() const {
@@ -158,9 +147,6 @@ int LinkedList<T>::getSize() const {
 Function: [] operator
 Purpose:takes an integer subscript as a parameter and returns 
 a pointer to the Customer object at that position in the list.
-input: x
-output:none
-return: none
 */
 template <class T>
 T* LinkedList<T>::operator[](int i) {
@@ -182,8 +168,6 @@ T* LinkedList<T>::operator[](int i) {
 /*
 Function: << operator
 Purpose:prints the contents of the LinkedList
-input/output:none
-return: list
 */
 template <class V>
 std::ostream& operator<<(std::ostream& output, LinkedList<V>& cl)

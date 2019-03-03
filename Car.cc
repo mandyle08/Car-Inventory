@@ -6,22 +6,11 @@
 
 using namespace std;
 
-/*
-Purpose:Constuctor
-input/output: make, model, colour, year, mileage
-return: none
-
-*/
 Car::Car(string ma, string mo, string col, int y, int m) :
   Vehicle(ma, mo, col, y, m){}
 
-  /*
-Function: << operator
-Purpose: prints contents of car objects
-input/output:none
-return: cars
-
-*/
+// Function: << operator
+// print contents of car objects
 void Car::toString(string& outStr){
     ostringstream ss;
 

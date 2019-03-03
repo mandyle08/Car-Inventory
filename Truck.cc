@@ -4,21 +4,12 @@
 using namespace std;
 
 
-/*
-Purpose:Constuctor
-input/output: make, model, colour, year, mileage, axel
-return: none
-
-*/
 Truck::Truck(string ma, string mo, string col, int y, int m, int a) :
   Vehicle(ma, mo, col, y, m), axles(a) {}
 
 /*
 Function: << operator
 Purpose: prints contents of truck objects
-input/output:none
-return: trucks
-
 */
 void Truck::toString(string& outStr){
     ostringstream ss;

@@ -4,88 +4,39 @@ using namespace std;
 #include "LinkedList.h"
 
 int Customer::nextId = 1000;
-/*
-Purpose:Constuctor
-input/output: firstname, lastname, address, phone number
-return: none
 
-*/
 Customer::Customer(string fname, string lname, string add, string pnum) : 
         Person(fname,lname,add,pnum), id(Customer::nextId++) { }
-/*
-Function: getId
-Purpose:gets id
-input/output:none
-return: id
-
-*/
-int           Customer::getId() const           { return id; }
+        
+// get customer id        
+int Customer::getId() const { return id; }
 
 
-/*
-Function: getNumVehicle
-Purpose:gets number of vehicles
-input/output:none
-return: number of vehicles
+int Customer::getNumVehicles() const  { return vehicles.getSize(); }
 
-*/
-int           Customer::getNumVehicles() const  { return vehicles.getSize(); }
+// Gets vehicle info
+LinkedList<Vehicle>&  Customer::getVehicles()  { return vehicles; }
 
-/*
-Function: getVehicle
-Purpose:gets vehicle
-input/output:none
-return: Gets vehicle info
-
-*/
-LinkedList<Vehicle>&  Customer::getVehicles()           { return vehicles; }
-//void          Customer::addVehicle(Vehicle* v)  { vehicles.add(v); }
-
-/*
-Function: += operator
-Purpose:adds vehicle to list
-input/output:vehicle
-return:none
-
-*/
+// adds vehicle to list
 Customer& Customer::operator+=(Vehicle* v)
 {
     vehicles += v;
     return *this;
 }
 
-/*
-Function: < operator
-Purpose: compare of customer objects
-input/output:none
-return: customer with higher last name
-
-*/
+// return customer with higher last name
 bool Customer::operator<(Customer& c)
 {
     return lastName < c.lastName;
 }
 
-/*
-Function: > operator
-Purpose: compare of customer objects
-input/output:none
-return: the customer with the lower last name
-
-*/
-
+// return the customer with the lower last name
 bool Customer::operator>(Customer& c)
 {
     return lastName > c.lastName;
 }
 
-/*
-Function: << operator
-Purpose: prints contents of customer objects
-input/output:none
-return: customers
-
-*/
+// print contents of customer objects
 ostream& operator<<(ostream& output, Customer& c)
 {
     ostringstream name;
@@ -100,4 +51,5 @@ ostream& operator<<(ostream& output, Customer& c)
         output << endl << "    " << c.getNumVehicles() << " vehicle(s): " << endl << endl;
         output << c.getVehicles() << endl<<endl;
     }
+  return output;
 }
