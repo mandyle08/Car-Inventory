@@ -50,7 +50,6 @@ VehicleList& VehicleList::operator+=(Vehicle* newVeh)
   }
 
   newNode->next = currNode;
-  return *this;
 }
 
 VehicleList& VehicleList::operator-=(Vehicle* v)

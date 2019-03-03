@@ -10,8 +10,6 @@ string  Vehicle::getColour() const   { return colour; }
 int     Vehicle::getYear() const     { return year; }
 int     Vehicle::getMilage() const   { return mileage; }
 
-Vehicle::~Vehicle(){}
-
 ostream& operator<<(ostream& output, Vehicle& v)
 {
   string outstr;

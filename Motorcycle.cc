@@ -3,12 +3,21 @@
 #include "Motorcycle.h"
 using namespace std;
 
+/*
+Purpose:Constuctor
+input/output: make, model, colour, year, mileage, sidecar
+return: none
+
+*/
 Motorcycle::Motorcycle(string ma, string mo, string col, int y, int m, bool s) :
   Vehicle(ma, mo, col, y, m), sideCar(s) {}
 
   /*
 Function: << operator
 Purpose: prints contents of motorcycle objects
+input/output:none
+return: motorcycle
+
 */
 void Motorcycle::toString(string& outStr){
     ostringstream ss;

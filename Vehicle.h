@@ -13,7 +13,7 @@ class Vehicle {
 
     public:
         Vehicle(string, string, string, int, int);
-        virtual ~Vehicle() =0;  
+    
         string getMake() const;
         string getModel() const;
         string getColour() const;
