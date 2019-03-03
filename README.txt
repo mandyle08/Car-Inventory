@@ -1,5 +1,7 @@
 Author: Amanda Le 
 
+Compatibility: This program runs under Ubuntu 16.04 Linux
+
 Purpose: Purpose of this program is to print out the all the customers and the vehicles they have in the shop mechanic, you can add customers and vehicles as well as remove customers/vehicles. It also prints out the mechanics. Vehicles are also categorized as car, motorcycle and truck, which can be added or removed.
 
 This folder contains:
